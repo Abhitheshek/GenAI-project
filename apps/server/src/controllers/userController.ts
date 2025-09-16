@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { asyncErrorHandler, httpError, httpResponse } from "@workspace/utils";
 import { ErrorStatusCodes, SuccessStatusCodes } from "@workspace/constants";
 import { UserRegistrationInput } from "@workspace/types";
-import dbServices from "../services/dbServices";
+import dbServices from "../lib/firebase";
 
 export default {
   register: asyncErrorHandler(
