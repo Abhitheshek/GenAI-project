@@ -7,7 +7,11 @@ import cookieParser from "cookie-parser";
 import { AppConfig } from "./config";
 import healthRouter from "./routes/healthRoutes";
 import globalErrorHandler from "./middlewares/globalErrorHandler";
-import userRouter from "./routes/userRouter";
+import authRouter from "./routes/authRouter";
+import { initFirebase } from "./lib/firebase";
+
+// Initialize Firebase Admin SDK
+initFirebase();
 
 const app: Application = express();
 const PORT = AppConfig.get("PORT");
@@ -26,7 +30,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.use("/api/v1/health", healthRouter);
-app.use("/api/v1/user", userRouter);
+app.use("/api/v1/auth", authRouter);
 
 //404 Handler
 app.use((req: Request, _: Response, next: NextFunction) => {

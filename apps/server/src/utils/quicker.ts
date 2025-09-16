@@ -42,10 +42,10 @@ export default {
   generateExpiryTime: (minutes: number) => {
     return dayjs().add(minutes, "minutes").toISOString();
   },
-  generateJWTToken: async (data: TokenPayload) => {
-    const token = await sign(data, String(AppConfig.get("JWT_SECRET")), {
-      expiresIn: "30d",
-    });
-    return token;
-  },
+  // generateJWTToken: async (data: TokenPayload) => {
+  //   const token = await sign(data, String(AppConfig.get("JWT_SECRET")), {
+  //     expiresIn: "30d",
+  //   });
+  //   return token;
+  // },
 };
