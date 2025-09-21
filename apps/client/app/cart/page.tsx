@@ -42,7 +42,8 @@ export default function CartPage() {
         totalAmount,
         status: 'pending',
         paymentMethod: orderData.paymentMethod,
-        shippingAddress: orderData.shippingAddress
+        shippingAddress: orderData.shippingAddress,
+        createdAt: new Date()
       });
       
       alert('Order placed successfully!');
