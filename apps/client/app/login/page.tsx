@@ -21,7 +21,7 @@ export default function LoginPage() {
 
     try {
       const result = await authService.login(formData);
-      authService.setCurrentUser(result.user, result.token);
+      authService.setCurrentUser(result.user);
       
       if (result.user.role === 'artisan') {
         router.push('/seller');
