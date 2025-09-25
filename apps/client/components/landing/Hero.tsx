@@ -41,12 +41,12 @@ export default function Hero({ user }: HeroProps) {
           {user ? (
             <>
               <Link href={user.role === 'artisan' ? '/seller' : '/buyer'}>
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 text-lg font-medium rounded-lg">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-7 text-lg font-medium rounded-lg">
                   {user.role === 'artisan' ? 'Seller Dashboard' : 'Browse Marketplace'}
                 </Button>
               </Link>
               <Link href={user.role === 'artisan' ? '/buyer' : '/seller'}>
-                <div  className="border border-gray-200 text-white   px-10 py-4 text-lg font-medium rounded-lg">
+                <div  className="border border-gray-200 text-white bg-black    px-10 py-4 text-lg font-medium rounded-lg">
                   {user.role === 'artisan' ? 'Shop Products' : 'Start Selling'}
                 </div>
               </Link>

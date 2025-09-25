@@ -37,3 +37,7 @@ npm-debug.log*
 packages/db/generated/prisma
 logs/
 gen-ai-hackathon-123-firebase-adminsdk-fbsvc-fd5985da59.json
+
+*.json
+# ya specifically
+apps/server/e-commerce-e84cb-firebase-adminsdk-*.json

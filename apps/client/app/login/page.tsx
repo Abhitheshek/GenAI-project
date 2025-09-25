@@ -166,8 +166,8 @@ export default function LoginPage() {
                 onClick={() => router.push('/register')}
                 className="font-medium transition-colors"
                 style={{ color: '#2563eb' }}
-                onMouseEnter={(e) => e.target.style.color = '#1d4ed8'}
-                onMouseLeave={(e) => e.target.style.color = '#2563eb'}
+                onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#1d4ed8'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#2563eb'}
               >
                 Don't have an account? <span className="underline">Sign up</span>
               </button>

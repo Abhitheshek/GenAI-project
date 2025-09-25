@@ -39,7 +39,7 @@ export default function Header({ user, onProfile }: HeaderProps) {
                     Dashboard
                   </Button>
                 </Link>
-                <Button size="sm" variant="outline" onClick={onProfile} className="border-blue-200 text-gray-800 hover:text-gray-900 hover:border-blue-300 px-4 py-2 text-sm">
+                <Button size="sm" variant="outline" onClick={onProfile} className="border-blue-200 text-gray-800 bg-white hover:text-gray-900 hover:border-blue-300 hover:bg-blue-200 px-4 py-2 text-sm">
                   Profile
                 </Button>
               </>
