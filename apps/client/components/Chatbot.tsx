@@ -23,11 +23,11 @@ export default function GeminiChatbot() {
     showSelectionButton: true,
   })
   const [showSettings, setShowSettings] = useState(false)
-  const messagesEndRef = useRef(null)
-  const inputRef = useRef(null)
-  const chatContainerRef = useRef(null)
-  const settingsRef = useRef(null)
-  const dropdownRef = useRef(null)
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
+  const chatContainerRef = useRef<HTMLDivElement>(null)
+  const settingsRef = useRef<HTMLDivElement>(null)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   // Scroll to bottom of messages
   useEffect(() => {
